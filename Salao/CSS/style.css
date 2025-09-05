@@ -1,0 +1,725 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: playfair-display, sans-serif;
+}
+header {
+  background-color: #ffffff5b;
+  margin-top: -150px;
+  width: 100%;
+  height: 140px;
+  position: fixed;
+  z-index: 1;
+  backdrop-filter: blur(10px);
+  box-shadow: 4px 0px 4px 0px #222222;
+}
+nav {
+  /* background-color: #ffffff5b;*/
+  width: 90%;
+  height: auto;
+  padding: 5px;
+  margin-left: 5%;
+  margin-right: 5%;
+  /* border: solid 1px red;*/
+  position: fixed;
+  z-index: 999;
+  margin-top: -90px;
+  top: 90px;
+  /* backdrop-filter: blur(10px);*/
+}
+nav ul {
+  display: flex;
+  margin: 10px;
+  list-style: none;
+}
+nav ul li {
+  display: block;
+}
+nav #topo {
+  display: flex;
+  /* background-color: #ffffff5b;*/
+  /* border: solid 1px red;*/
+  padding: 5px;
+  margin-bottom: 30px;
+  margin: 10px;
+  width: 97%;
+}
+nav #logo {
+  width: 10%;
+  /*border: solid 2px gold;*/
+}
+nav #logo_img {
+  width: 50%;
+}
+nav #pesquisa {
+  margin: auto;
+  background-color: #eeeded;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+nav #text_search {
+  padding: 10px;
+  border: none;
+  outline: none;
+  width: 300px;
+  padding: 10px;
+  font-size: 15px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  line-height: 20px;
+  background-color: #eeeded;
+}
+nav #btn_search {
+  padding: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: none;
+  line-height: 20px;
+  background-color: #eeeded;
+  cursor: pointer;
+}
+
+#icone_search {
+  width: 20px;
+  height: 20px;
+  margin-bottom: -5px;
+}
+#icone_menu {
+  width: 30px;
+  height: 30px;
+  /* border: solid 1px red;*/
+  margin-right: 15px;
+  margin-top: 5px;
+  display: none;
+}
+#icone_listaDesejo {
+  width: 30px;
+  height: 30px;
+  /*border: solid 1px red;*/
+  margin-right: 15px;
+  margin-top: 5px;
+}
+#icone_carrinho {
+  width: 30px;
+  height: 30px;
+  /* border: solid 1px red;*/
+  margin-top: 5px;
+}
+
+#icone_menu:hover {
+  filter: brightness(1) saturate(100%) invert(20%) sepia(80%) saturate(3000%)
+    hue-rotate(300deg) contrast(1.2);
+}
+#icone_carrinho:hover {
+  filter: brightness(1) saturate(100%) invert(20%) sepia(80%) saturate(3000%)
+    hue-rotate(300deg) contrast(1.2);
+}
+#icone_listaDesejo:hover {
+  filter: brightness(1) saturate(100%) invert(20%) sepia(80%) saturate(3000%)
+    hue-rotate(300deg) contrast(1.2);
+}
+ul a {
+  /* border: solid 1px red;*/
+  padding: 10px;
+  text-decoration: none;
+  float: left;
+  margin-right: 10px;
+  color: #1c0b2c;
+}
+ul a:hover {
+  border-radius: 10px;
+  color: #ff008c;
+}
+ul a::after {
+  content: "";
+  background-color: #ff008c;
+  position: relative;
+  width: 0px;
+  height: 3px;
+  bottom: 0px;
+  float: left;
+  transition: width 0.5s ease, background-color 0.4s ease;
+}
+
+ul a:hover::after {
+  width: 100%;
+}
+
+/*PEGANDO JA O SLIDER */
+.slider_header {
+  background-color: rgb(0, 140, 255);
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  margin-top: 145px;
+  position: relative;
+  top: -10px;
+}
+
+.slider_header #slider_adds {
+  width: 100%;
+  height: 100%;
+  background-color: orange;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider_header #voltar {
+  width: 50px;
+  height: 50px;
+  margin-top: -100px;
+  position: absolute;
+  margin-left: 2%;
+  background-color: rgba(0, 110, 255, 0.418);
+  color: #fff;
+  border-radius: 100%;
+  font-size: 25px;
+  border-color: white;
+  font-weight: bold;
+  border: none;
+}
+.slider_header #proximo {
+  width: 50px;
+  height: 50px;
+  margin-top: -100px;
+  position: absolute;
+  right: 0;
+  margin-right: 2%;
+  background-color: rgba(0, 110, 255, 0.418);
+  color: #fff;
+  border-radius: 100%;
+  font-size: 25px;
+  border-color: white;
+  font-weight: bold;
+  border: none;
+}
+
+/*
+.slider_header img {
+  min-width: 100%;
+  height: auto;
+  display: block;
+}
+  */
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.281);
+}
+
+.slider_header #imagem1 {
+  min-width: 100%;
+  height: auto;
+  display: block;
+  background-color: #4be264;
+}
+.slider_header #imagem2 {
+  min-width: 100%;
+  height: auto;
+  display: block;
+  background-color: #7c00f0;
+}
+.slider_header #imagem3 {
+  min-width: 100%;
+  height: auto;
+  display: block;
+  background-color: #ff008c;
+}
+
+/*MAIN*/
+.titulo_principal {
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+/*CONTAINER DOS PERFUMES*/
+
+#container-perfumes {
+  background-color: #ffffff;
+  width: 90%;
+  height: 300px;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 200px;
+  display: flex;
+}
+
+#container-perfumes .card {
+  width: 19%;
+  height: 430px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 18px rgba(0, 0, 0, 0.2), 0px 4px 6px rgba(0, 0, 0, 0.15);
+  margin: auto;
+}
+.icon_sacola {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  bottom: -2px;
+}
+.white {
+  background-color: #fff;
+  width: 100%;
+  height: auto;
+}
+
+.card .img_produto {
+  width: 90%;
+  height: 200px;
+  background-color: #7c00f0;
+  margin: auto;
+  position: relative;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.card .img_tamanho {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.nome_produto {
+  font-weight: bold;
+  text-align: initial;
+  padding: 5px;
+}
+.info_produto {
+  text-align: initial;
+  padding: 5px;
+  height: 70px;
+  overflow: hidden;
+  color: #333333;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.preco_produto {
+  text-align: left;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.moeda {
+  font-size: 16px;
+  font-weight: bold;
+}
+.add_carrinho {
+  background-color: #ff008c;
+  color: white;
+  width: 90%;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 5%;
+  margin-right: 5%;
+  transition: background-color 0.3s ease, height 0.4s ease;
+}
+
+.add_carrinho:hover {
+  background-color: #7e114d;
+  height: 50px;
+}
+
+#contador_carrinho {
+  background-color: #ff008c;
+  color: white;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 22px;
+  border-radius: 50%;
+  position: absolute;
+  right: 12px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  transition: transform 0.2s ease;
+}
+
+#contador_carrinho:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+/*FUNCOES DO CARIRINHO*/
+.modal_carrinho {
+  background-color: rgba(32, 32, 32, 0.699);
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  backdrop-filter: blur(5px);
+  display: none;
+}
+
+.carrinho_content {
+  background-color: #fff;
+  width: 50%;
+  height: 300px;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 200px;
+}
+
+.topo_h2 {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.meiop {
+  font-weight: bold;
+  font-size: 20px;
+  margin: 5px;
+}
+
+.cardlista {
+  background-color: #9999;
+  width: 90%;
+  height: 180px;
+  border-radius: 10px;
+  margin-left: 5%;
+  margin-right: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  gap: 20px;
+  justify-content: start;
+}
+#flexb {
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+.total_valor {
+  font-weight: bold;
+  font-size: 20px;
+  margin: 5px;
+}
+.valorx {
+  color: #1c0b2c;
+  font-weight: 100;
+}
+#Enviar {
+  background-color: #00ac6a;
+  float: right;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 14px;
+  color: #fff;
+  font-weight: bold;
+  margin-right: 5px;
+  margin-top: -5px;
+  height: 50px;
+}
+
+#Enviar:hover {
+  background-color: rgb(32, 124, 61);
+  cursor: pointer;
+}
+
+.botoes_card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.add_carrinho_btn {
+  background-color: #ff008c;
+  color: white;
+  flex: 1;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, height 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn_favoritarc {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 50px;
+  height: 40px;
+  padding: 0;
+  font-size: 12px;
+  float: right;
+  text-align: center;
+}
+
+.icone_favoritoc {
+  width: 24px;
+  height: 24px;
+  filter: grayscale(1) brightness(1);
+  transition: all 0.2s ease-in-out;
+}
+
+.icone_favoritoc.favoritado {
+  filter: saturate(10) hue-rotate(-10deg) drop-shadow(0 0 2px #ff2ca0);
+  content: url("/icons/love-heart-svgrepo-com.svg");
+}
+
+#produtolistado {
+  width: 30%;
+  height: 180px;
+  background-color: #1f34eec5;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  border: solid 1px;
+  margin-left: 3px;
+}
+
+.produto_item {
+  width: 120px;
+  height: 150px;
+  background-color: #1f34ee;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+}
+
+/*LISTA DESEJO*/
+#modal_favoritos {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#lista_favoritos_container {
+  background: #fff;
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh;
+  border-radius: 15px;
+  padding: 25px 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
+  position: relative;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#fechar_fav {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+#fechar_fav:hover {
+  color: #ff008c;
+}
+
+#lista_favoritos h2 {
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #1c0b2c;
+  text-align: center;
+}
+
+.item_favorito {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+}
+
+.img_fav {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info_fav {
+  flex: 1;
+}
+
+.nome_fav {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 6px 0;
+  color: #222;
+}
+
+.preco_fav {
+  font-size: 16px;
+  font-weight: 600;
+  color: #666;
+}
+
+.btns_fav {
+  display: flex;
+  gap: 10px;
+}
+
+.btn_fav_comprar,
+.btn_fav_remover {
+  border: none;
+  padding: 8px 14px;
+  border-radius: 7px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+  font-size: 14px;
+  user-select: none;
+}
+
+.btn_fav_comprar {
+  background-color: #ff008c;
+  color: white;
+}
+
+.btn_fav_comprar:hover {
+  background-color: #e1007b;
+}
+
+.btn_fav_remover {
+  background-color: #ccc;
+  color: #333;
+}
+
+.btn_fav_remover:hover {
+  background-color: #999;
+  color: white;
+}
+
+#lista_favoritos_container::-webkit-scrollbar {
+  width: 8px;
+}
+
+#lista_favoritos_container::-webkit-scrollbar-thumb {
+  background-color: #ff008c99;
+  border-radius: 10px;
+}
+
+/*PARTES DE BUSCAAAAA*/
+#resultados_busca {
+  display: none;
+  margin: 30px;
+  background-color: #02094bdc;
+  width: 90%;
+  margin-right: 5%;
+  margin-left: 5%;
+  border-radius: 10px;
+  margin-bottom: 100px;
+}
+
+#resultados_container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 5px;
+}
+.resultado_card {
+  width: 15%;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  border: 2px solid transparent;
+}
+
+.resultado_card:hover {
+  border-color: #ff008c;
+}
+h2 {
+  text-align: center;
+  font-size: 30px;
+  color: white;
+}
+
+.chama {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/*parte de ler  mais*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal_content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 80%;
+  max-width: 500px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.btn_lermais {
+  background-color: #00ac6a;
+  border: none;
+  padding: 3px;
+  border-radius: 10px;
+}
